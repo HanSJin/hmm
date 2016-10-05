@@ -22,7 +22,7 @@ public class Hmm {
 		A = new double[obs.length][states.length];
     	path = new int[states.length][obs.length];
     }
-    
+    //전향 알고리즘 -> "평가"
     public static double forwardAlgo(int X){
     	for (int y : states)
         {
@@ -49,7 +49,7 @@ public class Hmm {
     	 
     	 return A[obs.length-1][X];
     }
-    
+    // 비터비 알고리즘 -> "디코딩"
 	public static int[] viterbi()
     {
         for (int y : states)
